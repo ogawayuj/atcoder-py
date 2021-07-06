@@ -1,0 +1,14 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    build:
+      context: .
+      args:
+        - PROXY=host.docker.internal:3128
+    container_name: 'python3'
+    working_dir: '/root/src'
+    tty: true
+
+    volumes:
+      - ${SRC_PATH}:/root/src
