@@ -1,6 +1,7 @@
 version: '3'
 services:
   python3:
+    container_name: atcoderpy
     restart: always
     build:
       context: .
